@@ -3,7 +3,7 @@ Apache Kafka to Kubernetes Statefulset
 
 Example of deploy cluster to kubernetes.
 
-##Features
+## Features
 * Support scaling
 * Auto rebalancing on expanding cluster
 
