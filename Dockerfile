@@ -1,4 +1,4 @@
-FROM wurstmeister/kafka:0.10.2.0
+FROM wurstmeister/kafka:0.11.0.0
 
 MAINTAINER wizzie.io
 
