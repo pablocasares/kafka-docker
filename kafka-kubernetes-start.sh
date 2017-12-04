@@ -23,4 +23,6 @@ if [[ -z "$KAFKA_BROKER_ID" ]]; then
 	exit 1
 fi
 
+export JMX_PORT=$KAFKA_JMX_PORT
+
 /usr/bin/start-kafka.sh
