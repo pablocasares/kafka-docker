@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
+HOST=`hostname -s`
 
 if [[ -z "${KAFKA_ADVERTISED_HOST_NAME// }" ]] ; then
-	echo "KAFKA_ADVERTISED_HOST_NAME NOT DEFINED OR INVALID '$KAFKA_ADVERTISED_HOST_NAME' !!!"
-	exit 1
+	echo "Setting KAFKA_ADVERTISED_HOST_NAME var to [[${HOST}.kafka-svc]]"
+	export KAFKA_ADVERTISED_HOST_NAME=${HOST}.kafka-svc
 fi
 
-HOST=`hostname -s`
 
 if [[ $HOST =~ (.*)-([0-9]+)$ ]]; then
 	NAME=${BASH_REMATCH[1]}
